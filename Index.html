@@ -1,27 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css">
-<script src="script.js"></script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <!--  GeoJson -->
+    <script src="GeoJson/villeDeQuebec.js"></script>
+    <script src="GeoJson/chienperdu.js"></script>
+    <script src="GeoJson/chienobserve.js"></script>
+    <!-- Plugins -->
+    <link rel="stylesheet" href="plugins/legend/leaflet.legend.css">
+    <script src="plugins/legend/leaflet.legend.js"></script>
+    <script type="text/javascript" src="plugins/credit/leaflet-control-credits.js"></script>
+    <link rel="stylesheet" href="plugins/credit/leaflet-control-credits.css" />
 </head>
-<body>
-<div id="entete">En-tête</div>
-<div id="nav">Navigation</div>
-<div class="mycontainer">
-    <div id="main">
-        <h1>Contenu</h1>
-        <section id="section">Section 1</section>
-        <section id="section">Section 2</section>
-    </div>
-    
-    <div id="aside">
-        <h1>contenu supplémentaire</h1>
-    </div>
-  </div>
 
-  <footer id="pied">Pied de page</footer>
+<body>
+    <!-- Mise page du navigateur qui sera en haut de la page en permanance -->
+    <header>
+        <nav>
+            <a href="https://www.cegeplimoilou.ca/">
+                <img src="Images/Logo_Cegep.png" alt="Logo Cégep" class="logo">
+            </a>
+            <ul>
+                <li><a href="#sectionAcceuil">Accueil</a></li>
+                <li><a href="#sectionPerdu">Chien perdu?</a></li>
+                <li><a href="#sectionObserve">Chien observé?</a></li>
+                <li><a href="#sectionPourquoi">Pourquoi?</a></li>
+                <li><a href="#sectionCarte">Carte</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Section 1, simple div avec image et titre pour l'acceuil au site -->
+    <div id="sectionAcceuil" class="section blanc">
+        <img src="Images/Chien_perdu.jpg" alt="Chien perdu" class="image_div">
+        <div class="top-right titre">Chien perdu?, plus un problème!</div>
+    </div>
+    <!-- Section 2, simple div avec texte et image -->
+    <div id="sectionPerdu" class="section jaunespa">
+        <img src="Images/bonhomme-blanc-point-dinterrogation.jpg" alt="" class="bottom-right image-section">
+        <h1 class="titresection">Lorsque vous avez perdu votre chien, vous aurez besoin des informations suivantes</h1>
+        <p class="text">Lorsque vous perdez votre chien, il est important d'avoir un maximum d'information sur l'animal.
+            Ceci va permettre d'avoir un maximum d'information pour mettre dans la déclaration. Voici quelques exemples
+            d'informations qui sont nécessaires pour débuter les recherches :</p>
+        <br>
+        <li class="text">Son nom</li><br>
+        <li class="text">Sa race</li><br>
+        <li class="text">Son genre</li><br>
+        <li class="text">Date de disparition</li><br>
+        <li class="text">Une photo de l'animal</li><br>
+    </div>
+    <!-- Section 3, simple div avec texte et image -->
+    <div id="sectionObserve" class="section bleuspa">
+        <img src="Images/bonhomme-loupe.jpg" alt="" class="bottom-left image-section">
+        <h1 class="titresection white">Lorsque vous observez un chien perdu, vous aurez besoin de recueillir les
+            informations suivantes : </h1>
+        <br>
+        <li class="text white">Sa race</li><br>
+        <li class="text white">Son état de santé</li><br>
+        <li class="text white">Les circonstances de l'observation</li><br>
+        <li class="text white">Date de l'observation</li><br>
+        <li class="text white">Photo de l'animal (si possible)</li>
+
+    </div>
+    <!-- Section 3, simple div avec texte et image -->
+    <div id="sectionPourquoi" class="section jaunespa">
+        <img src="Images/bonhomme-qui-cherche.jpg" alt="" class="bottom-right image-section">
+        <h1 class="titresection">Pourquoi recueillir toutes ses informations?</h1>
+        <p class="text">Le but du projet est de pouvoir positionner les déclarations sur une carte interactive en ligne.
+            Chaque déclaration aura son point unique et sera différenciée entre une observation et une perte. Il suffit
+            d'appuyer sur les icônes pour consulter l'information. De cette façon, il sera beaucoup plus facile de
+            rendre publique la disparition de son animal ou bien consulter toutes les observations lors de la cavale de
+            l'animal.
+        </p><br><br>
+        <p class="text">Dans la section suivante se trouve un exemple de la carte en ligne disponible au public.</p>
+        <br><br>
+        <p class="text smallerwidth">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
+            dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
+            est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
+            necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
+            rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
+            perferendis doloribus asperiores repellat."</p>
+        <br><br>
+        <p class="text smallerwidth">"At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+            praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+            cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et
+            dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis
+            est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas
+            assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum
+            necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum
+            rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut
+            perferendis doloribus asperiores repellat."</p>
+    </div>
+    <!-- Section 4, div comprenant la carte-->
+    <div>
+        <div class="titrecarte">Déclarations de chien perdus ou observés</div>
+        <div id="sectionCarte" class="sectionCarte">
+            <div id="map">
+                <script src="script.js"></script>
+            </div>
+        </div>
+        <!-- Mise page du pied de page qui sera en bas de la page en tout temps -->
+        <footer id="pied">
+            <a href="https://spadequebec.ca/"><img src="Images/spa-de-quebec.png" alt="Logo SPA de Québec"
+                    class="logo"></a>
+            <ul>
+                <li><a href="https://spadequebec.ca/faire-un-don/">Faire un don</a></li>
+                <li><a href="https://spadequebec.ca/nous-joindre/">Nous joindre</a></li>
+                <li><a href="https://spadequebec.ca/adoption/chiens/">Adopter un chien</a></li>
+            </ul>
+            <p class="bottom-right footer">Réalisé par : Cédrick Marcoux </p>
+
+        </footer>
 </body>
+
 </html>

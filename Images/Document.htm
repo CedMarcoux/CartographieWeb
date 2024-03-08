@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+    <script src="Document_files/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="Document_files/villeDeQuebec.js"></script>
+    <script src="Document_files/chienperdu.js"></script>
+    <script src="Document_files/chienobserve.js"></script>
+<link rel="stylesheet" href="Document_files/style.css"><link rel="stylesheet" href="Document_files/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""></head>
+
+<body>
+<!-- Mise page du navigateur qui sera en haut de la page en permanance -->
+    <header>
+        <nav>
+            <a href="https://www.cegeplimoilou.ca/">
+            <img src="Document_files/Logo_Cegep.png" alt="Logo Cégep" class="logo">
+            </a>
+            <ul>
+                <li><a href="#sectionAcceuil">Acceuil</a></li>
+                <li><a href="#sectionPerdu">Chien perdu?</a></li>
+                <li><a href="#sectionObserve">Chien observé?</a></li>
+                <li><a href="#sectionPourquoi">Pourquoi?</a></li>
+                <li><a href="#sectionCarte">Carte</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Section 1, simple div avec image et titre pour l'acceuil au site -->
+    <div id="sectionAcceuil" class="section blanc">
+        <img src="Document_files/Chien_perdu.jpg" alt="Chien perdu" class="image_div">
+        <div class="top-right titre">Chien perdu?, plus un problème!</div>
+    </div>
+<!-- Section 2, simple div avec texte et image -->
+    <div id="sectionPerdu" class="section jaunespa">
+        <img src="Document_files/bonhomme-blanc-point-dinterrogation.jpg" alt="" class="bottom-right image-section">
+        <h1 class="titresection">Lorsque vous avez perdu votre chien, vous aurez besoin des informations suivantes</h1>
+            <p class="text">Lorsque vous perdez votre chien, il est 
+important d'avoir un maximum d'information sur l'animal. Ceci va 
+permettre d'avoir un maximum d'information pour mettre dans la 
+déclaration. Voici quelques exemples d'information qui sont nécessaire 
+pour débuter les recherches :</p>
+            <br>
+            <li class="text">Son nom</li><br>
+            <li class="text">Sa race</li><br>
+            <li class="text">Son genre</li><br>
+            <li class="text">Date de disparition</li><br>
+            <li class="text">Une photo de l'animal</li><br>
+    </div>
+<!-- Section 3, simple div avec texte et image -->
+    <div id="sectionObserve" class="section bleuspa">
+        <img src="Document_files/bonhomme-loupe.jpg" alt="" class="bottom-left image-section">
+        <h1 class="titresection">Lorsque vous observé un chien perdu, vous aurez besoin de receuillir les informations suivantes : </h1>
+        <br>
+        <li class="text">Sa race</li><br>
+        <li class="text">Son état de santé</li><br>
+        <li class="text">Les circonstances de l'observation</li><br>
+        <li class="text">Date de l'observation</li><br>
+        <li class="text">Une photo de l'animal (si possible)</li><br>
+    </div>
+<!-- Section 3, simple div avec texte et image -->
+    <div id="sectionPourquoi" class="section jaunespa">
+        <img src="Document_files/bonhomme-qui-cherche.jpg" alt="" class="bottom-right image-section">
+        <h1 class="titresection">Pourquoi receuillir toutes ses informations?</h1>
+            <p class="text">Le but du projet est de pouvoir positionné 
+les déclarations sur une carte interactive en ligne. Chaque déclaration 
+aura son point unique et sera différencié entre une observation et un 
+perte. Il suffit d'appuyer sur les icones pour consulter l'information. 
+De cette façon, il sera beaucoup plus facile de rendre publique la 
+disparition de son animal ou bien consulté toutes les observations lors 
+de la cavale de l'animal.
+            </p><br><br>
+            <p class="text">Dans la section suivante se trouve un exemple de la carte en ligne disponible au publique.</p>
+    </div>
+<!-- Section 4, div comprenant la carte-->
+    <div>
+        <div class="titrecarte">Carte des déclarations de chien perdu ou observé</div>
+        <div id="sectionCarte" class="sectionCarte">
+            <div id="map" class="leaflet-container leaflet-touch leaflet-fade-anim leaflet-grab leaflet-touch-drag leaflet-touch-zoom" tabindex="0">
+                <script src="Document_files/script.js"></script><div class="leaflet-pane leaflet-map-pane" style="transform: translate3d(387px, 0px, 0px);"><div class="leaflet-pane leaflet-tile-pane"><div class="leaflet-layer " style="z-index: 1; opacity: 1;"><div class="leaflet-tile-container leaflet-zoom-animated" style="z-index: 19; transform: translate3d(0px, 0px, 0px) scale(1);"><img alt="" src="Document_files/721_002.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(111px, 175px, 0px); opacity: 1;"><img alt="" src="Document_files/721_008.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(367px, 175px, 0px); opacity: 1;"><img alt="" src="Document_files/720_003.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(111px, -81px, 0px); opacity: 1;"><img alt="" src="Document_files/720_006.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(367px, -81px, 0px); opacity: 1;"><img alt="" src="Document_files/722_003.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(111px, 431px, 0px); opacity: 1;"><img alt="" src="Document_files/722_007.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(367px, 431px, 0px); opacity: 1;"><img alt="" src="Document_files/721_007.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-145px, 175px, 0px); opacity: 1;"><img alt="" src="Document_files/721_006.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(623px, 175px, 0px); opacity: 1;"><img alt="" src="Document_files/720_008.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-145px, -81px, 0px); opacity: 1;"><img alt="" src="Document_files/720_004.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(623px, -81px, 0px); opacity: 1;"><img alt="" src="Document_files/722_006.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-145px, 431px, 0px); opacity: 1;"><img alt="" src="Document_files/722_005.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(623px, 431px, 0px); opacity: 1;"><img alt="" src="Document_files/721_005.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-401px, 175px, 0px); opacity: 1;"><img alt="" src="Document_files/721_004.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(879px, 175px, 0px); opacity: 1;"><img alt="" src="Document_files/720_002.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-401px, -81px, 0px); opacity: 1;"><img alt="" src="Document_files/720_005.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(879px, -81px, 0px); opacity: 1;"><img alt="" src="Document_files/722_004.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-401px, 431px, 0px); opacity: 1;"><img alt="" src="Document_files/722_002.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(879px, 431px, 0px); opacity: 1;"><img alt="" src="Document_files/721_003.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-657px, 175px, 0px); opacity: 1;"><img alt="" src="Document_files/721.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1135px, 175px, 0px); opacity: 1;"><img alt="" src="Document_files/720_007.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-657px, -81px, 0px); opacity: 1;"><img alt="" src="Document_files/720.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1135px, -81px, 0px); opacity: 1;"><img alt="" src="Document_files/722_008.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(-657px, 431px, 0px); opacity: 1;"><img alt="" src="Document_files/722.png" class="leaflet-tile leaflet-tile-loaded" style="width: 256px; height: 256px; transform: translate3d(1135px, 431px, 0px); opacity: 1;"></div></div></div><div class="leaflet-pane leaflet-overlay-pane"><svg pointer-events="none" class="leaflet-zoom-animated" width="1944" height="820" style="transform: translate3d(-549px, -68px, 0px);" viewBox="-549 -68 1944 820"><g><path class="leaflet-interactive" stroke="undefined" stroke-opacity="undefined" stroke-width="undefined" stroke-linecap="round" stroke-linejoin="round" fill="undefined" fill-opacity="undefined" fill-rule="evenodd" d="M0 0"></path><path class="leaflet-interactive" stroke="undefined" stroke-opacity="undefined" stroke-width="undefined" stroke-linecap="round" stroke-linejoin="round" fill="undefined" fill-opacity="undefined" fill-rule="evenodd" d="M0 0"></path><path class="leaflet-interactive" stroke="undefined" stroke-opacity="undefined" stroke-width="undefined" stroke-linecap="round" stroke-linejoin="round" fill="undefined" fill-opacity="undefined" fill-rule="evenodd" d="M0 0"></path><path class="leaflet-interactive" stroke="undefined" stroke-opacity="undefined" stroke-width="undefined" stroke-linecap="round" stroke-linejoin="round" fill="undefined" fill-opacity="undefined" fill-rule="evenodd" d="M0 0"></path><path class="leaflet-interactive" stroke="#555555" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#555555" fill-opacity="0.5" fill-rule="evenodd" d="M605 111L656 191L651 202L651 208L654 209L654 213L658 222L667 231L672 230L672 228L674 227L680 228L686 233L686 238L692 246L700 253L687 284L618 338L622 344L617 350L622 354L622 356L620 360L621 363L617 365L595 342L597 341L596 340L598 337L594 332L590 333L586 329L585 330L587 332L583 336L581 341L563 324L542 289L536 283L550 274L563 288L579 278L546 223L528 197L521 183L486 132L535 100L538 95L560 83L577 70L602 108z"></path><path class="leaflet-interactive" stroke="undefined" stroke-opacity="undefined" stroke-width="undefined" stroke-linecap="round" stroke-linejoin="round" fill="undefined" fill-opacity="undefined" fill-rule="evenodd" d="M0 0"></path><path class="leaflet-interactive" stroke="#e6ab02" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#e68d02" fill-opacity="0.3" fill-rule="evenodd" d="M553 389L549 388L542 381L533 376L519 356L548 337L550 337L555 333L553 329L563 323L574 335L575 334L578 340L580 341L587 332L585 330L586 329L590 333L596 333L598 336L596 342L604 352L617 365L621 363L607 413L603 422L594 431L594 433L593 432L592 434L576 444L572 448L572 450L568 445L566 449L562 451L556 448L554 446L557 442L554 438L546 443L526 460L522 455L520 455L517 449L515 450L513 448L514 445L511 443L513 441L512 440L521 437L525 434L525 432L510 415L517 413L526 414L534 408L540 399L548 399L551 397L553 395L553 389zM560 403L565 401L564 399L560 399L559 401z"></path><path class="leaflet-interactive" stroke="#66a61e" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#66a61e" fill-opacity="0.3" fill-rule="evenodd" d="M454 282L458 285L460 283L466 284L468 282L471 285L476 293L478 293L482 303L493 321L495 322L495 324L507 336L530 373L535 378L541 381L549 388L551 388L553 390L553 394L549 399L541 399L526 414L510 414L510 416L514 418L526 434L519 438L505 441L468 445L445 454L441 443L432 448L433 449L431 452L421 443L419 445L409 435L412 432L405 424L406 421L400 415L408 407L397 395L372 383L396 359L404 353L404 342L401 338L402 337L399 336L396 332L395 321L397 321L397 318L403 314L406 309L419 302L428 295L430 295L443 285L450 282L454 282z"></path><path class="leaflet-interactive" stroke="#e729a8" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#e7298a" fill-opacity="0.3" fill-rule="evenodd" d="M356 373L374 391L366 400L364 398L346 416L392 462L415 441L419 445L421 443L430 452L433 450L432 448L438 446L438 444L439 445L441 443L444 452L447 453L467 445L512 440L513 441L511 443L515 447L513 449L516 449L526 460L553 438L557 442L554 445L557 449L562 450L569 445L572 449L573 454L561 458L561 469L553 476L553 484L550 490L549 489L542 493L543 494L542 495L542 493L540 495L541 496L538 495L528 503L511 521L512 522L510 522L509 525L506 526L507 527L497 531L489 537L476 542L470 542L463 539L462 540L459 537L457 539L457 537L448 540L443 537L434 538L431 541L426 540L416 545L417 547L402 552L402 554L390 560L378 571L377 570L372 572L344 546L350 542L357 540L367 528L352 519L342 528L334 525L318 508L286 528L223 464L221 464L181 424L258 404L291 370L295 375L298 372L301 376L304 374L323 393L349 366L355 371z"></path><path class="leaflet-interactive" stroke="#d95f02" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#d95f02" fill-opacity="0.3" fill-rule="evenodd" d="M430 126L432 125L440 136L440 138L443 141L441 141L441 143L445 148L449 142L450 144L453 142L461 153L468 148L467 146L486 133L521 183L540 216L550 229L559 246L578 275L577 276L579 278L577 280L563 288L555 281L551 274L536 283L542 289L563 323L553 329L555 331L554 334L519 356L507 336L495 324L495 322L493 321L482 303L478 293L477 294L475 292L441 239L423 251L407 226L408 225L395 207L390 211L386 211L381 202L383 202L375 189L381 185L357 149L376 136L377 135L373 130L389 121L391 118L390 115L406 104L405 102L411 98L430 126z"></path><path class="leaflet-interactive" stroke="#7570b3" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#7570b3" fill-opacity="0.3" fill-rule="evenodd" d="M605 111L656 191L651 202L651 208L654 209L654 213L658 222L667 231L672 230L672 228L674 227L680 228L686 233L686 238L692 246L700 253L687 284L618 338L622 344L617 350L622 354L622 356L620 360L621 363L617 365L595 342L597 341L596 340L598 337L594 332L590 333L586 329L585 330L587 332L583 336L581 341L563 324L542 289L536 283L550 274L563 288L579 278L546 223L528 197L521 183L486 132L535 100L538 95L560 83L577 70L602 108z"></path><path class="leaflet-interactive" stroke="#1b9e77" stroke-opacity="1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="#1b9e77" fill-opacity="0.3" fill-rule="evenodd" d="M305 91L315 85L326 101L330 103L329 104L333 104L333 102L339 106L339 110L343 108L346 112L346 115L342 117L340 114L342 124L341 123L380 183L381 185L375 189L383 202L381 202L384 208L388 212L395 207L408 225L407 226L423 251L441 239L469 283L447 283L404 311L405 313L396 319L394 325L396 327L398 335L401 336L401 338L404 341L404 353L395 360L369 386L349 366L323 393L304 374L301 375L297 372L295 375L291 370L258 404L182 424L158 402L160 401L114 355L113 353L128 350L102 322L163 303L164 302L160 298L197 262L209 275L232 254L213 235L219 228L237 211L238 212L263 187L270 194L310 167L249 74L289 46L306 70L297 77L305 91zM366 261L363 270L360 267L358 269L362 275L361 274L361 276L358 278L366 291L368 290L370 292L372 290L377 298L380 299L386 307L386 309L390 309L391 308L388 305L385 305L385 301L382 300L383 296L381 294L384 293L383 291L386 293L387 292L376 275L379 272L377 273L374 268L374 263L371 263L366 256L366 260zM383 272L380 274L387 284L390 283L394 290L394 286L391 282L393 281L398 288L398 286L400 286L389 267L385 269L383 272zM379 311L391 311L390 309L377 309L379 311zM385 312L385 314L390 312L393 313L391 311L385 312zM392 276L394 278L393 279L391 277z"></path></g></svg></div><div class="leaflet-pane leaflet-shadow-pane"></div><div class="leaflet-pane leaflet-marker-pane"><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(632px, 245px, 0px); z-index: 245;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(573px, 370px, 0px); z-index: 370;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(507px, 249px, 0px); z-index: 249;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(460px, 224px, 0px); z-index: 224;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(323px, 159px, 0px); z-index: 159;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(282px, 289px, 0px); z-index: 289;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(302px, 303px, 0px); z-index: 303;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(304px, 414px, 0px); z-index: 414;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(358px, 479px, 0px); z-index: 479;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(476px, 469px, 0px); z-index: 469;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(435px, 514px, 0px); z-index: 514;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(454px, 359px, 0px); z-index: 359;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(587px, 226px, 0px); z-index: 226;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(591px, 315px, 0px); z-index: 315;" tabindex="0" role="button"><img src="Document_files/questionmark.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(543px, 277px, 0px); z-index: 277;" tabindex="0" role="button"><img src="Document_files/binocular.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(430px, 301px, 0px); z-index: 301;" tabindex="0" role="button"><img src="Document_files/binocular.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(402px, 369px, 0px); z-index: 369;" tabindex="0" role="button"><img src="Document_files/binocular.svg" alt=""></div><div class="leaflet-marker-icon leaflet-div-icon leaflet-zoom-animated leaflet-interactive" style="margin-left: -16px; margin-top: -16px; width: 32px; height: 32px; transform: translate3d(515px, 399px, 0px); z-index: 399;" tabindex="0" role="button"><img src="Document_files/binocular.svg" alt=""></div></div><div class="leaflet-pane leaflet-tooltip-pane"></div><div class="leaflet-pane leaflet-popup-pane"></div><div class="leaflet-proxy leaflet-zoom-animated" style="transform: translate3d(158264px, 184743px, 0px) scale(1024);"></div></div><div class="leaflet-control-container"><div class="leaflet-top leaflet-left"><div class="leaflet-control-zoom leaflet-bar leaflet-control"><a class="leaflet-control-zoom-in" href="#" title="Zoom in" role="button" aria-label="Zoom in" aria-disabled="false"><span aria-hidden="true">+</span></a><a class="leaflet-control-zoom-out" href="#" title="Zoom out" role="button" aria-label="Zoom out" aria-disabled="false"><span aria-hidden="true">−</span></a></div></div><div class="leaflet-top leaflet-right"><div class="leaflet-control-layers leaflet-control" aria-haspopup="true"><a class="leaflet-control-layers-toggle" href="#" title="Layers" role="button"></a><section class="leaflet-control-layers-list"><div class="leaflet-control-layers-base"><label><span><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_116" checked="checked"><span> Open Street Map</span></span></label><label><span><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_116"><span> CyclOSM</span></span></label><label><span><input type="radio" class="leaflet-control-layers-selector" name="leaflet-base-layers_116"><span> Esri World Imagery</span></span></label></div><div class="leaflet-control-layers-separator"></div><div class="leaflet-control-layers-overlays"><label><span><input type="checkbox" class="leaflet-control-layers-selector"><span> Chien perdu</span></span></label><label><span><input type="checkbox" class="leaflet-control-layers-selector"><span> Chien observé</span></span></label><label><span><input type="checkbox" class="leaflet-control-layers-selector"><span> Arrondissement</span></span></label></div></section></div></div><div class="leaflet-bottom leaflet-left"><div class="leaflet-control-scale leaflet-control"><div class="leaflet-control-scale-line" style="width: 96px;">5 km</div><div class="leaflet-control-scale-line" style="width: 92px;">3 mi</div></div></div><div class="leaflet-bottom leaflet-right"><div class="leaflet-control-attribution leaflet-control"><a href="https://leafletjs.com/" title="A JavaScript library for interactive maps"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="12" height="8" viewBox="0 0 12 8" class="leaflet-attribution-flag"><path fill="#4C7BE1" d="M0 0h12v4H0z"></path><path fill="#FFD500" d="M0 4h12v3H0z"></path><path fill="#E0BC00" d="M0 7h12v1H0z"></path></svg> Leaflet</a> <span aria-hidden="true">|</span> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a></div></div></div>
+        </div>
+<!-- Légende dans un div sous la carte-->
+        <div class="legend">
+            <img src="Document_files/questionmark.svg" alt="" class="small">
+            <p class="text">Chien perdu</p>
+            <img src="Document_files/binocular.svg" alt="" class="small">
+            <p class="text">Chien obseré</p>
+        </div>
+    </div>
+<!-- Mise page du pied de page qui sera en bas de la page en permanance -->
+    <footer id="pied">
+        <a href="https://spadequebec.ca/"><img src="Document_files/spa-de-quebec.png" alt="Logo SPA de Québec" class="logo"></a>
+        <ul>
+            <li><a href="https://spadequebec.ca/faire-un-don/">Faire un don</a></li>
+            <li><a href="https://spadequebec.ca/nous-joindre/">Nous joindre</a></li>
+            <li><a href="https://spadequebec.ca/adoption/chiens/">Adopter un chien</a></li>
+        </ul>
+        <p class="bottom-right footer">Réalisé par : Cédrick Marcoux</p>
+    </footer>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</div></body></html>

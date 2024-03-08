@@ -74,15 +74,15 @@ li a {
   float: left;
 }
 
-.floatright {
+.floatright{
   float: right;
 }
 
-.floatcenter {
+.floatcenter{
   float: center;
 }
 
-.legend {
+.legend{
   display: flex;
   text-align: center;
   justify-content: center;
@@ -120,14 +120,9 @@ li a {
   transform: translate(-50%, -50%);
 }
 
-.flex {
+.flex{
   display: flex;
 }
-
-.smallerwidth {
-  width: 60%;
-}
-
 
 /* Section */
 
@@ -166,9 +161,6 @@ li a {
   background-color: #DDDDDD;
 }
 
-.white {
-  color: white;
-}
 
 /* Image */
 .image_div {
@@ -195,15 +187,15 @@ li a {
   margin-top: 30px;
 }
 
-.small {
+.small{
   width: 50px;
   height: 50px;
   margin-left: 30px;
 }
 
-.image-section {
+.image-section{
   width: 30%;
-  height: 50%;
+  height: 30%;
   bottom: 160px;
 }
 
@@ -212,30 +204,29 @@ li a {
   top: 80px;
   font-size: 300%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  background-color: gray;
-  padding: 10px;
-  color: white;
+  background-color: #111;
+  color: antiquewhite;
 }
 
 .titresection {
   top: 80px;
   font-size: 300%;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #111;
   padding-top: 80px;
   padding-bottom: 40px;
 }
 
-.footer {
-  font-size: medium;
+.footer{
+  font-size: large;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  position: absolute;
 }
 
-.titrecarte {
+.titrecarte{
   top: 120px;
   width: 80%;
-  font-size: larger;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-size:larger;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-align: center;
   align-items: center;
   position: relative;
@@ -245,112 +236,13 @@ li a {
   justify-content: center;
 }
 
-.text {
-  padding: 10px;
+.text{
   font-size: large;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* Media querry */
-
-@media only screen and (max-width: 1200px) {
-  .logo {
-    height: 50px;
-    width: 70px;
-  }
-
-  ul li {
-    margin: 0;
-  }
-
-  .titre {
-    top: 70px;
-  }
-
-  .image-section {
-    height: 30%;
-  }
-
-  .footer {
-    font-size: smaller;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-}
-
-@media only screen and (max-width: 950px) {
-  .smallerwidth {
-    display: none;
-  }
-
-}
-
 @media only screen and (max-width: 600px) {
-  .logo {
-    height: 50px;
-    width: 70px;
-  }
-
-  ul li {
-    margin: 0;
-  }
-
-  .titre {
-    top: 70px;
-  }
-
-  .footer {
-    font-size: smaller;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-
-  .image-section {
-    display: none;
-  }
-
-  .smallerwidth {
-    width: 60%;
-    z-index: -99;
-  }
-}
-
-
-@media only screen and (max-width: 510px) {
-  .logo {
-    height: 30px;
-    width: 50px;
-  }
-
-  ul li {
-    margin: 0;
-    height: 20px;
-    width: 20%;
-  }
-
-  .titre {
-    top: 150px;
-    font-size: larger;
-    width: 50%;
-  }
-
-  .footer {
-    font-size: smaller;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-
-  .image-section {
-    width: 30%;
-    height: 30%;
-    bottom: 220px;
-    z-index: -99;
-  }
-
-  .footer {
-    font-size: smaller;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-  }
-
-  .smallerwidth {
-    display: none;
+  body {
+    background-color: lightblue;
   }
 }
